@@ -1,0 +1,11 @@
+from __future__ import absolute_import
+
+# flake8: noqa
+
+# import apis into api package
+from swagger_client.api.autenticacao_api import AutenticacaoApi
+from swagger_client.api.balano_energtico_agora_api import BalanoEnergticoAgoraApi
+from swagger_client.api.balano_energtico_consolidado_agora_api import BalanoEnergticoConsolidadoAgoraApi
+from swagger_client.api.carga_minuto_a_minuto_hoje_api import CargaMinutoAMinutoHojeApi
+from swagger_client.api.gerao_por_fonte_minuto_a_minuto_hoje_api import GeraoPorFonteMinutoAMinutoHojeApi
+from swagger_client.api.situao_dos_reservatrios_agora_api import SituaoDosReservatriosAgoraApi
