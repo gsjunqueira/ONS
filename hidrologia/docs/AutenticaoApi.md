@@ -1,0 +1,102 @@
+# swagger_client.AutenticaoApi
+
+All URIs are relative to *https://integra.ons.org.br/api*
+
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**post_autenticar**](AutenticaoApi.md#post_autenticar) | **POST** /autenticar | 
+[**post_renovar**](AutenticaoApi.md#post_renovar) | **POST** /renovar | 
+
+# **post_autenticar**
+> ResultadoAutenticacao post_autenticar(body)
+
+
+
+Obter o token de autenticacao para utilizacao da API.  O usuário e senha devem ser os mesmos utilizados para se autenticar no SINTEGRE, mas para obter acesso aos dados da API, a permissão deve ser solicitada em: https://sintegre.ons.org.br/paginas/meu-perfil/meus-sistemas.aspx   Processo: Operação Hidráulica  Sistema: IntegracaoHidrologia - API que fornece dados hidrológicos  O acesso será concedido após a aprovação do gestor do processo.
+
+### Example
+```python
+from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.AutenticaoApi()
+body = swagger_client.Autenticacao() # Autenticacao | 
+
+try:
+    api_response = api_instance.post_autenticar(body)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling AutenticaoApi->post_autenticar: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**Autenticacao**](Autenticacao.md)|  | 
+
+### Return type
+
+[**ResultadoAutenticacao**](ResultadoAutenticacao.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **post_renovar**
+> post_renovar(body)
+
+
+
+Renovar o token de autenticacao para utilizacao da API
+
+### Example
+```python
+from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.AutenticaoApi()
+body = swagger_client.RenovarAutenticaco() # RenovarAutenticaco | 
+
+try:
+    api_instance.post_renovar(body)
+except ApiException as e:
+    print("Exception when calling AutenticaoApi->post_renovar: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**RenovarAutenticaco**](RenovarAutenticaco.md)|  | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
